@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Toggle Switches</title>
+
+    <style type="text/css">
+        body {
+            background-color: black;
+            padding: 300px 0 0 20px;
+        }
+
+
+        .toggle-switch {
+            appearance: none;
+            width: 6rem;
+            height: 3rem;
+            border-radius: 3rem;
+            background-color: red;
+            outline: 0;
+            cursor: pointer;
+            transition: all .1s ease-in-out;
+            position: relative;
+        }
+        .toggle-switch::after {
+            content: '';
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: 100%;
+            position: absolute;
+            transform: scale(0.7);
+            left: 0;
+            transition: left .1s ease-in-out;
+        }
+
+        .toggle-switch:checked {
+            background-color: green;
+        }
+        .toggle-switch:checked::after {
+            left: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" class="toggle-switch" />
+</body>
+</html>
